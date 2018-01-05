@@ -115,7 +115,6 @@ public class PhoneActivity extends AppCompatActivity {
                 startActivity(new Intent(PhoneActivity.this, InfoActivity.class));
             }
         });
-
     }
 
     private void handleLocation(Location _location){
@@ -145,11 +144,13 @@ public class PhoneActivity extends AppCompatActivity {
                 } else {
                     builder = new AlertDialog.Builder(this);
                 }
-                builder.setTitle("Start a Call")
-                        .setMessage("You are currently at " + h.getName() + "\nWould you like to call the Quality Help Line?")
+                builder.setTitle("Quality of care concern?")
+                        .setMessage("Are you on Medicare and concerned about the quality of care you are received at " + h.getName() + ", would you like to call the quality Helpline?")
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                // continue with delete
+                                Intent intent = new Intent(Intent.ACTION_DIAL);
+                                intent.setData(Uri.parse("tel:" + phoneNumber));
+                                startActivity(intent);
                             }
                         })
                         .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {

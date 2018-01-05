@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:weightSum=".8"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ImageView
+            android:id="@+id/doublelogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:srcCompat="@drawable/doublelogoline" />
+
+        <TextView
+            android:id="@+id/thirdpage_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/thirdpage_top"
+            android:textColor="#000"
+            android:textStyle="bold"
+            tools:text="@string/thirdpage_top" />
+
+        <TextView
+            android:id="@+id/thirdpage_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:linksClickable="true"
+            android:text="@string/thirdpage_middle"
+            android:textColor="#000"
+            tools:text="@string/thirdpage_middle" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/red_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/rounded_button"
+        android:text="close"
+        android:textColor="#fff"
+        tools:text="close" />
+
+    <ImageView
+        android:id="@+id/red_bar"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="false"
+        app:srcCompat="@drawable/red_square" />
+</RelativeLayout>

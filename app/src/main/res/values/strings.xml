@@ -1,0 +1,166 @@
+<resources>
+    <string name="app_name">Medicare Quality Helpline</string>
+    <string name="firstpage_top"><b>Select your state or territory</b></string>
+
+    <string name="hawaii">*Hawaii includes the Pacific Territories of the American Samoa, Guam and the Commonwealth of the Northern Mariana Islands.</string>
+    <string name="secondpage_top"><b>Call us if you have these concerns:</b></string>
+    <string name="bullets">&#8226; A medication mistake\n&#8226; You are being discharged before you are ready to leave\n&#8226; Picked up an infection wile in the facility\n&#8226; Wrong treatment or care provided\n&#8226; Other health care error</string>
+    <string name="call">Press here to call us</string>
+    <string name="hours"><b>Daily:</b> 9am-5pm <b>Weekends/Holidays:</b> 11am-3pm</string>
+    <string name="msgdatarates">Msg &#038; data rates may apply</string>
+    <string name="change_state">Change your state</string>
+    <string name="copyright">&#169; 2018 Livanta LLC</string>
+
+    <string name="thirdpage_top"><b>This app\'s purpose is to provide a simple way to call the Medicare Quality HelpLine if you are concerned about the quality of your care.</b></string>
+    <string name="thirdpage_middle">This material was prepared by <a href="http://www.livanta.com">Livanta LLC,</a> the Quality Improvement Organization for BFCC Areas 1 and 5, under contract with the Centers for Medicare &amp; Medicaid Services (CMS), an agency of the U.S. Department of Health and Human Services. The content presented does not necessarily reflect CMS policy. 11SOW-MD-2015-QIOBFCC-BENE15\n\nThis app includes the states and territories of AK, AZ, CA, CT, HI, ID, ME, MA, NH, NJ, NV, NY, OR, PA, PR, RI, VI, VT, WA, the Pacific Territories of American Samoa, Guam, and the Commonwealth of the Northern Mariana Islands. This app tracks user usage data to try and improve our service. If you want to learn more about this process please visit our <a href="http://www.bfccqioarea1.com/privacy.html">Privacy Policy.</a></string>
+
+    <string name="button_ak">AK\nAlaska</string>
+    <string name="button_alaska">Alaska</string>
+    <string name="button_az">AZ\nArizona</string>
+    <string name="button_arizona">Arizona</string>
+    <string name="button_ca">CA\nCalifornia</string>
+    <string name="button_california">California</string>
+    <string name="button_ct">CT\nConnecticut</string>
+    <string name="button_connecticut">Connecticut</string>
+    <string name="button_hi">HI\nHawaii</string>
+    <string name="button_hawaii">Hawaii</string>
+    <string name="button_id">ID\nIdaho</string>
+    <string name="button_idaho">Idaho</string>
+    <string name="button_ma">MA\nMassachusetts</string>
+    <string name="button_massachusetts">Massachusetts</string>
+    <string name="button_me">ME\nMaine</string>
+    <string name="button_maine">Maine</string>
+    <string name="button_nh">NH\nNew Hampshire</string>
+    <string name="button_new_hampshire">New Hampshire</string>
+    <string name="button_nj">NJ\nNew Jersey</string>
+    <string name="button_new_jersey">New Jersey</string>
+    <string name="button_nv">NV\nNevada</string>
+    <string name="button_nevada">Nevada</string>
+    <string name="button_ny">NY\nNew York</string>
+    <string name="button_new_york">New York</string>
+    <string name="button_or">OR\nOregon</string>
+    <string name="button_oregon">Oregon</string>
+    <string name="button_pa">PA\nPennsylvania</string>
+    <string name="button_pennsylvania">Pennsylvania</string>
+    <string name="button_pr">PR\nPuerto Rico</string>
+    <string name="button_puerto_rico">Puerto Rico</string>
+    <string name="button_ri">RI\nRhode Island</string>
+    <string name="button_rhode_island">Rhode Island</string>
+    <string name="button_vi">VI\nVirgin Islands</string>
+    <string name="button_virgin_islands">Virgin Islands</string>
+    <string name="button_vt">VT\nVermont</string>
+    <string name="button_vermont">Vermont</string>
+    <string name="button_wa">WA\nWashington</string>
+    <string name="button_washington">Washington</string>
+    <string name="not_listed">My state or territory is not listed</string>
+    <string name="longer_logo">Longer logo</string>
+    <string name="preference_file_key">com.livanta.medicarequalityhelpline_geolocation</string>
+    <string name="phone_number_key">PHONE_NUMBER</string>
+
+    <string-array name="state_codes">
+        <item>AL</item>
+        <item>AK</item>
+        <item>AZ</item>
+        <item>AR</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>DC</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RI</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
+    </string-array>
+    <string-array name="state_names">
+        <item>Alabama</item>
+        <item>Alaska</item>
+        <item>Arizona</item>
+        <item>Arkansas</item>
+        <item>California</item>
+        <item>Colorado</item>
+        <item>Connecticut</item>
+        <item>Delaware</item>
+        <item>District of Columbia</item>
+        <item>Florida</item>
+        <item>Georgia</item>
+        <item>Hawaii</item>
+        <item>Idaho</item>
+        <item>Illinois</item>
+        <item>Indiana</item>
+        <item>Iowa</item>
+        <item>Kansas</item>
+        <item>Kentucky</item>
+        <item>Louisiana</item>
+        <item>Maine</item>
+        <item>Maryland</item>
+        <item>Massachusetts</item>
+        <item>Michigan</item>
+        <item>Minnesota</item>
+        <item>Mississippi</item>
+        <item>Missouri</item>
+        <item>Montana</item>
+        <item>Nebraska</item>
+        <item>Nevada</item>
+        <item>New Hampshire</item>
+        <item>New Jersey</item>
+        <item>New Mexico</item>
+        <item>New York</item>
+        <item>North Carolina</item>
+        <item>North Dakota</item>
+        <item>Ohio</item>
+        <item>Oklahoma</item>
+        <item>Oregon</item>
+        <item>Pennsylvania</item>
+        <item>Rhode Island</item>
+        <item>South Carolina</item>
+        <item>South Dakota</item>
+        <item>Tennessee</item>
+        <item>Texas</item>
+        <item>Utah</item>
+        <item>Vermont</item>
+        <item>Virginia</item>
+        <item>Washington</item>
+        <item>West Virginia</item>
+        <item>Wisconsin</item>
+        <item>Wyoming</item>
+    </string-array>
+</resources>

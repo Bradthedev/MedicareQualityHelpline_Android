@@ -118,40 +118,45 @@ public class PhoneActivity extends AppCompatActivity {
     }
 
     private void handleLocation(Location _location){
+        if(_location != null) {
 
-        //0.0001 in Decimal Degrees = about 7.871 meters around the 45th parallel... more information found at https://en.wikipedia.org/wiki/Decimal_degrees
-        double DEGREES_DECIMAL_RADIUS = 0.0020; // about 49 meters
+            //0.0001 in Decimal Degrees = about 7.871 meters around the 45th parallel... more information found at https://en.wikipedia.org/wiki/Decimal_degrees
+            double DEGREES_DECIMAL_RADIUS = 0.0020; // about 49 meters
 
-        double actualLat = _location.getLatitude();
-        double actualLng = _location.getLongitude();
+            double actualLat = _location.getLatitude();
+            double actualLng = _location.getLongitude();
 
-        double maxLat = actualLat + DEGREES_DECIMAL_RADIUS;
-        double maxLng = actualLng + DEGREES_DECIMAL_RADIUS;
+            double maxLat = actualLat + DEGREES_DECIMAL_RADIUS;
+            double maxLng = actualLng + DEGREES_DECIMAL_RADIUS;
 
-        double minLat = actualLat - DEGREES_DECIMAL_RADIUS;
-        double minLng = actualLng - DEGREES_DECIMAL_RADIUS;
+            double minLat = actualLat - DEGREES_DECIMAL_RADIUS;
+            double minLng = actualLng - DEGREES_DECIMAL_RADIUS;
 
-        ArrayList<HospitalResults> hospitals = viewDatabase();
+            ArrayList<HospitalResults> hospitals = viewDatabase();
 
-        for (HospitalResults h : hospitals){
-            if(h.getLat() > minLat && h.getLat() < maxLat && h.getLng() > minLng && h.getLng() < maxLng) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
-                builder.setTitle("Quality of care concern?")
-                        .setMessage("Are you on Medicare and concerned about the quality of care you are received at " + h.getName() + ", would you like to call the quality Helpline?")
-                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                Intent intent = new Intent(Intent.ACTION_DIAL);
-                                intent.setData(Uri.parse("tel:" + phoneNumber));
-                                startActivity(intent);
-                            }
-                        })
-                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        })
-                        .setIcon(android.R.drawable.ic_dialog_dialer)
-                        .show();
+            if (hospitals != null) {
+
+                for (HospitalResults h : hospitals) {
+                    if (h.getLat() > minLat && h.getLat() < maxLat && h.getLng() > minLng && h.getLng() < maxLng) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
+                        builder.setTitle("Quality of care concern?")
+                                .setMessage("Are you on Medicare and concerned about the quality of care you are received at " + h.getName() + ", would you like to call the quality Helpline?")
+                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Intent intent = new Intent(Intent.ACTION_DIAL);
+                                        intent.setData(Uri.parse("tel:" + phoneNumber));
+                                        startActivity(intent);
+                                    }
+                                })
+                                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
+                                })
+                                .setIcon(android.R.drawable.ic_dialog_dialer)
+                                .show();
+                    }
+                }
             }
         }
     }

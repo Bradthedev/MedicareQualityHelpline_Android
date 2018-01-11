@@ -41,6 +41,8 @@ public class MyApplication extends Application {
         //database
         hospitalDatabase = new DBAdapter(this);
         hospitalDatabase.open();
+
+
     }
 
     public void setPhoneNumberPrefs(String phoneNumber) {

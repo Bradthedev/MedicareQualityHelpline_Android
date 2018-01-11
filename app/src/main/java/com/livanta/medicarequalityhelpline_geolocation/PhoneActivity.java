@@ -122,9 +122,6 @@ public class PhoneActivity extends AppCompatActivity {
         //0.0001 in Decimal Degrees = about 7.871 meters around the 45th parallel... more information found at https://en.wikipedia.org/wiki/Decimal_degrees
         double DEGREES_DECIMAL_RADIUS = 0.0020; // about 49 meters
 
-        double livantaLat = 39.1303723;
-        double livantaLng = -76.7968933;
-
         double actualLat = _location.getLatitude();
         double actualLng = _location.getLongitude();
 
@@ -138,12 +135,7 @@ public class PhoneActivity extends AppCompatActivity {
 
         for (HospitalResults h : hospitals){
             if(h.getLat() > minLat && h.getLat() < maxLat && h.getLng() > minLng && h.getLng() < maxLng) {
-                AlertDialog.Builder builder;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
-                } else {
-                    builder = new AlertDialog.Builder(this);
-                }
+                AlertDialog.Builder builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
                 builder.setTitle("Quality of care concern?")
                         .setMessage("Are you on Medicare and concerned about the quality of care you are received at " + h.getName() + ", would you like to call the quality Helpline?")
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
@@ -155,7 +147,7 @@ public class PhoneActivity extends AppCompatActivity {
                         })
                         .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                // do nothing
+                                dialog.dismiss();
                             }
                         })
                         .setIcon(android.R.drawable.ic_dialog_dialer)

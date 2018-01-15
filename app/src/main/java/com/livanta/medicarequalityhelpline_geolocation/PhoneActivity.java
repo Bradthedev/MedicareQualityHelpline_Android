@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -88,33 +89,69 @@ public class PhoneActivity extends AppCompatActivity {
 
         phoneNumber = app.getPhoneNumberPrefs();
 
-        btnCall = findViewById(R.id.call_button);
-        btnChangeState = findViewById(R.id.change_state);
-        btnInfo = findViewById(R.id.i_button);
+        // KEYPRO
+        if (phoneNumber == null) {
+            btnCall = findViewById(R.id.call_button);
+            btnChangeState = findViewById(R.id.change_state);
+            btnInfo = findViewById(R.id.i_button);
 
-        btnCall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:" + phoneNumber));
-                startActivity(intent);
-            }
-        });
+            btnCall.setText(R.string.keypro);
+            btnCall.setCompoundDrawablesWithIntrinsicBounds(0,0,0,0);
 
-        btnChangeState.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                app.setPhoneNumberPrefs(null);
-                startActivity(new Intent(PhoneActivity.this, MainActivity.class));
-            }
-        });
+            btnCall.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String url = "https://www.keproqio.com";
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse(url));
+                    startActivity(i);
+                }
+            });
 
-        btnInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(PhoneActivity.this, InfoActivity.class));
-            }
-        });
+            btnChangeState.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    app.setPhoneNumberPrefs(null);
+                    startActivity(new Intent(PhoneActivity.this, MainActivity.class));
+                }
+            });
+
+            btnInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(PhoneActivity.this, InfoActivity.class));
+                }
+            });
+
+        } else { // NOT KEYPRO
+            btnCall = findViewById(R.id.call_button);
+            btnChangeState = findViewById(R.id.change_state);
+            btnInfo = findViewById(R.id.i_button);
+
+            btnCall.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_DIAL);
+                    intent.setData(Uri.parse("tel:" + phoneNumber));
+                    startActivity(intent);
+                }
+            });
+
+            btnChangeState.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    app.setPhoneNumberPrefs(null);
+                    startActivity(new Intent(PhoneActivity.this, MainActivity.class));
+                }
+            });
+
+            btnInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(PhoneActivity.this, InfoActivity.class));
+                }
+            });
+        }
     }
 
     private void handleLocation(Location _location){

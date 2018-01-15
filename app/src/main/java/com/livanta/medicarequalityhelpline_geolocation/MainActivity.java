@@ -122,6 +122,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.button_none:
                 // handle phone number change here
+                app.setPhoneNumberPrefs(null);
                 startActivity(new Intent(MainActivity.this, PhoneActivity.class));
                 break;
         }

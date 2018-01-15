@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_hi:
             case R.id.button_id:
             case R.id.button_nv:
+            case R.id.button_or:
             case R.id.button_wa:
                 // handle phone number change here AREA 5
                 // 1-866-316-6977
@@ -108,7 +109,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_nh:
             case R.id.button_nj:
             case R.id.button_ny:
-            case R.id.button_or:
             case R.id.button_pa:
             case R.id.button_pr:
             case R.id.button_ri:

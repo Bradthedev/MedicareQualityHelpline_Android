@@ -8,14 +8,14 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private MyApplication app;
+    private MedicareQualityHelplinev2 app;
 
     private String phoneNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        app = (MyApplication)getApplicationContext();
+        app = (MedicareQualityHelplinev2)getApplicationContext();
 
         phoneNumber = app.getPhoneNumberPrefs();
         if (phoneNumber != null) {

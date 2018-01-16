@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Medicare Quality Helpline</string>
+    <string name="app_name">Medicare Quality Helpline v2</string>
     <string name="firstpage_top"><b>Select your state or territory</b></string>
 
     <string name="hawaii">*Hawaii includes the Pacific Territories of the American Samoa, Guam and the Commonwealth of the Northern Mariana Islands.</string>

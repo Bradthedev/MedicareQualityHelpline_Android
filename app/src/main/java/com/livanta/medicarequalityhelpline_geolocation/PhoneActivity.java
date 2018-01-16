@@ -3,23 +3,18 @@ package com.livanta.medicarequalityhelpline_geolocation;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
-import android.os.Build;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -32,7 +27,7 @@ public class PhoneActivity extends AppCompatActivity {
     private static final long MIN_TIME_BW_UPDATES = 1000 * 60 * 5; // 5 minute
 
 
-    private MyApplication app;
+    private MedicareQualityHelplinev2 app;
 
     private String phoneNumber;
 
@@ -50,7 +45,7 @@ public class PhoneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone);
 
-        app = (MyApplication)getApplicationContext();
+        app = (MedicareQualityHelplinev2)getApplicationContext();
         database = app.hospitalDatabase;
 
 
